@@ -5,8 +5,12 @@ import { ArrowRight, Github, Mail } from "lucide-react";
 import { SectionHeader } from "./SectionHeader";
 import { profile } from "../data/portfolioData";
 
-const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
-const API = `${BACKEND_URL}/api`;
+// Formspree form ID — set REACT_APP_FORMSPREE_ID in /app/frontend/.env (e.g. "xpzgkqwa")
+// Get yours free at https://formspree.io → New Form → copy the ID from the endpoint URL
+const FORMSPREE_ID = process.env.REACT_APP_FORMSPREE_ID || "";
+const FORMSPREE_URL = FORMSPREE_ID
+  ? `https://formspree.io/f/${FORMSPREE_ID}`
+  : "";
 
 const initialForm = { name: "", email: "", subject: "", message: "" };
 
@@ -22,19 +26,31 @@ export const Contact = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (sending) return;
+
+    if (!FORMSPREE_URL) {
+      toast.error("Contact form not configured yet.");
+      return;
+    }
+
     setSending(true);
     try {
-      await axios.post(`${API}/contact`, form);
+      await axios.post(
+        FORMSPREE_URL,
+        {
+          name: form.name,
+          email: form.email,
+          subject: form.subject,
+          message: form.message,
+          _replyto: form.email,
+        },
+        { headers: { Accept: "application/json" } }
+      );
       toast.success("Message received. I will be in touch.");
       setSent(true);
       setForm(initialForm);
     } catch (err) {
       console.error(err);
-      const msg =
-        err?.response?.data?.detail?.[0]?.msg ||
-        err?.response?.data?.detail ||
-        "Something went wrong. Please try again.";
-      toast.error(typeof msg === "string" ? msg : "Could not send message.");
+      toast.error("Could not send message. Please try again.");
     } finally {
       setSending(false);
     }
@@ -144,7 +160,7 @@ export const Contact = () => {
 
             <div className="flex flex-wrap items-center justify-between gap-6 pt-4">
               <p className="font-mono text-xs text-neutral-600">
-                {sent ? "Last message sent successfully." : "Submissions are stored securely."}
+                {sent ? "Last message sent successfully." : "Sent directly to my inbox."}
               </p>
               <button
                 type="submit"
