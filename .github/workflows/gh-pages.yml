@@ -1,6 +1,5 @@
 name: Deploy to GitHub Pages
 
-# Ensure the workflow has permission to push the generated site
 permissions:
   contents: write
 
@@ -13,13 +12,11 @@ on:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
-    # Allow using Node 20 temporarily on runners that default to newer Node
     env:
       ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION: 'true'
     steps:
       - uses: actions/checkout@v4
         with:
-          # make sure the action can push back to the repo
           persist-credentials: true
           fetch-depth: 0
 
