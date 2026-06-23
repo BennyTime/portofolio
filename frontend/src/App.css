@@ -1,34 +1,54 @@
-.App-logo {
-    height: 40vmin;
-    pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-    .App-logo {
-        animation: App-logo-spin infinite 20s linear;
-    }
-}
-
-.App-header {
-    background-color: #0f0f10;
+.App {
     min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: calc(10px + 2vmin);
-    color: white;
+    background-color: #0A0A0A;
+    color: #FFFFFF;
 }
 
-.App-link {
-    color: #61dafb;
+.fade-in {
+    animation: fadeIn 1s ease-out forwards;
 }
 
-@keyframes App-logo-spin {
+@keyframes fadeIn {
     from {
-        transform: rotate(0deg);
+        opacity: 0;
+        transform: translateY(16px);
     }
     to {
-        transform: rotate(360deg);
+        opacity: 1;
+        transform: translateY(0);
     }
+}
+
+.reveal-stagger > * {
+    opacity: 0;
+    animation: fadeIn 0.9s ease-out forwards;
+}
+
+.reveal-stagger > *:nth-child(1) { animation-delay: 0.05s; }
+.reveal-stagger > *:nth-child(2) { animation-delay: 0.15s; }
+.reveal-stagger > *:nth-child(3) { animation-delay: 0.25s; }
+.reveal-stagger > *:nth-child(4) { animation-delay: 0.35s; }
+.reveal-stagger > *:nth-child(5) { animation-delay: 0.45s; }
+.reveal-stagger > *:nth-child(6) { animation-delay: 0.55s; }
+
+.hover-grayscale img {
+    filter: grayscale(100%) contrast(1.1);
+    transition: filter 600ms ease, transform 800ms ease;
+}
+
+.hover-grayscale:hover img {
+    filter: grayscale(0%) contrast(1);
+    transform: scale(1.03);
+}
+
+.divider-line {
+    height: 1px;
+    background: linear-gradient(to right, transparent, #262626 20%, #262626 80%, transparent);
+}
+
+.section-num {
+    font-family: 'JetBrains Mono', monospace;
+    color: #525252;
+    font-size: 0.7rem;
+    letter-spacing: 0.25em;
 }
