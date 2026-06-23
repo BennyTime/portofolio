@@ -44,8 +44,8 @@ export const Hero = () => {
             data-testid="hero-tagline"
             className="font-sans text-neutral-300 text-base md:text-lg leading-relaxed max-w-md"
           >
-            {profile.tagline}. Building distributed systems, secure platforms,
-            and interactive experiences with care.
+            {profile.tagline}. Building frontends, backend APIs, and
+            interactive experiences with care.
           </p>
 
           <div className="flex items-center gap-6">

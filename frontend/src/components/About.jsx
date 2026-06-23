@@ -20,11 +20,11 @@ export const About = () => {
               {profile.bio}
             </p>
             <p className="font-sans text-neutral-400 text-base leading-relaxed max-w-xl">
-              I gravitate toward problems where careful design, observability,
-              and clean integration boundaries matter. My academic and project
-              work has covered everything from event-driven backends with
-              FastAPI and Django REST to cryptographic systems and real-time
-              3D experiences in the browser.
+              Most of my work sits on the frontend — designing and building
+              React interfaces that are clear, responsive, and pleasant to
+              use — while also contributing to the backend APIs that power
+              them with FastAPI. Alongside that, I've explored cryptographic
+              systems and real-time 3D experiences in the browser.
             </p>
           </div>
 

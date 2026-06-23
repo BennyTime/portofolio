@@ -1,7 +1,7 @@
 import { useState } from "react";
 import axios from "axios";
 import { toast } from "sonner";
-import { ArrowRight, Github, Linkedin, Mail } from "lucide-react";
+import { ArrowRight, Github, Mail } from "lucide-react";
 import { SectionHeader } from "./SectionHeader";
 import { profile } from "../data/portfolioData";
 
@@ -80,17 +80,6 @@ export const Contact = () => {
                   >
                     <Github size={16} strokeWidth={1.5} />
                     GitHub
-                    <ArrowRight size={14} strokeWidth={1.5} className="opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all" />
-                  </a>
-                  <a
-                    href={profile.social.linkedin}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    data-testid="contact-linkedin-link"
-                    className="group inline-flex items-center gap-3 font-mono text-sm text-neutral-300 hover:text-white"
-                  >
-                    <Linkedin size={16} strokeWidth={1.5} />
-                    LinkedIn
                     <ArrowRight size={14} strokeWidth={1.5} className="opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all" />
                   </a>
                 </div>

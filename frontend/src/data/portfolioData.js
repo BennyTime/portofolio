@@ -3,36 +3,35 @@ export const profile = {
   title: "Software Engineer",
   tagline: "College Graduate in Software Engineering",
   location: "Aveiro, Portugal",
-  email: "bernardo.borges@example.com",
-  bio: `I am a Software Engineering graduate focused on building reliable, well-architected systems. My work spans distributed architectures, secure backend services, and immersive interactive experiences. I value clarity, rigor, and the discipline of writing software that endures.`,
+  email: "bernardo.borges@ua.pt",
+  bio: `I am a Software Engineering graduate who works primarily as a full-stack builder, with my strongest focus on the frontend. I enjoy turning ideas into clear, usable interfaces and stitching them together with the backend APIs that make them work. I value clarity, rigor, and the discipline of writing software that endures.`,
   social: {
     github: "https://github.com/bennytime",
-    linkedin: "https://www.linkedin.com/",
   },
 };
 
 export const skills = {
   Languages: ["Python", "JavaScript", "TypeScript", "Java", "C", "SQL"],
-  Frameworks: ["FastAPI", "Django REST", "React", "Three.js", "Node.js"],
-  Infrastructure: ["Docker", "Kubernetes", "PostgreSQL", "MongoDB", "Redis", "Keycloak"],
-  Observability: ["Grafana", "Prometheus", "Centralized Logging"],
-  Practices: ["Microservices", "Event-driven Design", "REST APIs", "CI/CD", "Network Security"],
+  Frameworks: ["FastAPI", "React", "Three.js", "Node.js"],
+  Infrastructure: ["Docker", "PostgreSQL", "MongoDB", "Redis", "Keycloak"],
+  Observability: ["Grafana", "Prometheus"],
+  Practices: ["Microservices", "REST APIs", "CI/CD", "Network Security"],
 };
 
 export const experience = [
   {
     role: "Software Engineering Graduate",
     org: "University of Aveiro",
-    period: "2022 — 2025",
+    period: "2022 — 2026",
     summary:
-      "Completed a comprehensive software engineering programme with emphasis on distributed systems, security, and full-stack development. Delivered production-grade academic projects in collaboration with university institutions.",
+      "Completed a comprehensive software engineering programme with a strong focus on full-stack development — particularly the frontend — alongside backend API design and security. Delivered production-grade academic projects in collaboration with university institutions.",
   },
   {
-    role: "Full-Stack Engineer · Project Lead",
+    role: "Full-Stack Engineer · Frontend Focus",
     org: "Taça UA — AAUAv",
-    period: "Feb 2025 — Jun 2025",
+    period: "Feb 2025 — Jun 2026",
     summary:
-      "Led the design of a microservices platform powering the administration of the university sports cup. Built FastAPI and Django REST services with asynchronous processing, integrated React frontends with Keycloak SSO, and instrumented the full stack with Grafana and Prometheus.",
+      "Contributed to a platform powering the administration of the university sports cup. Focused on building the React frontend and integrating it with Keycloak authentication, while also contributing to parts of the FastAPI backend API.",
   },
 ];
 
@@ -40,8 +39,8 @@ export const education = [
   {
     degree: "B.Sc. in Software Engineering",
     org: "University of Aveiro",
-    period: "2022 — 2025",
-    note: "Coursework in distributed systems, network security, data engineering, and human–computer interaction.",
+    period: "2022 — 2026",
+    note: "Focused on software engineering and information systems, with an emphasis on building practical and scalable applications. The course emphasized engineering principles, problem-solving, and independent learning through hands-on software development.",
   },
 ];
 
