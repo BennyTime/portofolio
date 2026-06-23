@@ -1,0 +1,98 @@
+{
+  "theme": "dark",
+  "archetype": "Archetype 4 (Swiss & High-Contrast) - Dark Editorial Variant",
+  "design_concept": "Editorial Dark: A sophisticated, magazine-style layout tailored for a software engineering portfolio. High contrast, sharp typography (serif/mono pairing), narrow reading columns, and a focus on narrative structure. Complete avoidance of generic tech gradients (no purple/violet).",
+  "file_extension_guidance": "Use .js or .jsx for all React components. Do not use TypeScript (.tsx).",
+  "colors": {
+    "background": {
+      "primary": "#0A0A0A",
+      "secondary": "#121212",
+      "tertiary": "#1A1A1A"
+    },
+    "text": {
+      "primary": "#FFFFFF",
+      "secondary": "#A3A3A3",
+      "muted": "#737373"
+    },
+    "accent": {
+      "primary": "#FFFFFF",
+      "hover": "#E5E5E5"
+    },
+    "border": {
+      "default": "#262626",
+      "focus": "#525252"
+    }
+  },
+  "typography": {
+    "fonts": {
+      "heading": "Cormorant Garamond, serif",
+      "body": "Inter, sans-serif",
+      "mono": "JetBrains Mono, monospace"
+    },
+    "rules": {
+      "h1": "text-5xl md:text-6xl lg:text-7xl font-light tracking-tight font-serif",
+      "h2": "text-3xl md:text-4xl lg:text-5xl font-light tracking-tight font-serif",
+      "h3": "text-xl md:text-2xl font-light font-serif",
+      "body": "text-base leading-relaxed text-secondary font-sans",
+      "labels_tags": "text-xs uppercase tracking-[0.2em] font-mono text-secondary"
+    }
+  },
+  "layout_and_spacing": {
+    "spacing_scale": "Generous spacing. Sections should use py-24 or py-32. Elements within sections gap-8 or gap-12.",
+    "grid_system": "Editorial narrow columns for text. About me text should be constrained (max-w-2xl) to act like a magazine column. Project grids should be asymmetrical (e.g., alternating between col-span-8 and col-span-4).",
+    "corners": "Sharp (rounded-none) or very subtle (rounded-sm) to maintain the Swiss Brutalist / Editorial edge. No soft large radii."
+  },
+  "components": {
+    "buttons": "Flat, sharp-edged. primary: bg-white text-black hover:bg-neutral-200. secondary: border border-neutral-800 text-white hover:bg-neutral-900.",
+    "cards": "Cardless approach or 1px subtle border (border-neutral-800) with flat background (bg-neutral-900). No drop shadows, rely on borders.",
+    "navigation": "Sticky, crystal glassmorphism (bg-black/60 backdrop-blur-xl border-b border-white/10).",
+    "contact_form": "Minimalist inputs. border-b only or sharp outlined inputs (border-neutral-800 bg-transparent focus:border-white focus:ring-0)."
+  },
+  "motion_and_interactions": {
+    "hover_states": "Subtle border color change, slight opacity shifts. Images can be grayscale by default, color on hover.",
+    "transitions": "transition-all duration-300 ease-in-out."
+  },
+  "assets": {
+    "icons": "lucide-react (thin stroke-width 1.5)",
+    "images": [
+      {
+        "category": "hero_background",
+        "url": "https://images.pexels.com/photos/12623752/pexels-photo-12623752.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        "description": "Abstract dark architecture for the hero section background (overlay heavily)."
+      },
+      {
+        "category": "project_taca_ua",
+        "url": "https://images.pexels.com/photos/27141316/pexels-photo-27141316.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        "description": "Taça UA Administration Website representation"
+      },
+      {
+        "category": "project_secure_doc",
+        "url": "https://images.pexels.com/photos/8466227/pexels-photo-8466227.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        "description": "Secure Document Repository representation"
+      },
+      {
+        "category": "project_astratd",
+        "url": "https://images.pexels.com/photos/13930769/pexels-photo-13930769.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        "description": "AstraTD 3D game representation"
+      },
+      {
+        "category": "project_evsync",
+        "url": "https://images.pexels.com/photos/5864153/pexels-photo-5864153.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        "description": "EVSync EV charging platform representation"
+      }
+    ]
+  },
+  "sections_instructions": {
+    "hero": "Name: Bernardo Borges. Title: Software Engineer. Use the background image with a heavy black overlay (bg-black/80). Large serif typography. Minimalist scroll indicator.",
+    "about": "Editorial text column. Max width 2xl. Tell the story of a College Graduate in Software Engineering.",
+    "skills": "List programming languages, frameworks, tools using minimal mono-spaced tags.",
+    "experience": "Timeline layout. Minimalist vertical line with sharp nodes.",
+    "projects": "Showcase the 4 projects in an asymmetrical grid. Hovering over a project card should reveal the image with full opacity.",
+    "education": "Similar to experience, clean editorial list.",
+    "contact": "Form to store in MongoDB. Must have data-testid on inputs and submit button."
+  },
+  "accessibility_and_testing": {
+    "data_testids": "All interactive elements MUST have data-testid attribute (e.g., data-testid='contact-submit-button').",
+    "contrast": "Ensure text contrast meets APCA/WCAG standards on dark backgrounds."
+  }
+}
