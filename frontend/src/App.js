@@ -45,7 +45,7 @@ function App() {
           },
         }}
       />
-      <BrowserRouter>
+      <BrowserRouter basename="/portofolio">
         <Routes>
           <Route path="/" element={<Home />} />
         </Routes>

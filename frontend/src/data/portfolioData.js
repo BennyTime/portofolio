@@ -1,20 +1,29 @@
 export const profile = {
   name: "Bernardo Borges",
-  title: "Software Engineer",
-  tagline: "College Graduate in Software Engineering",
+  title: "B.Sc. in Computer Engineering",
+  tagline: "Bachelor's student in Computer Engineering",
   location: "Aveiro, Portugal",
+  phone: "+351 964754707",
+  dob: "18/02/2002",
+  nationality: "Portuguese",
   email: "bernardo.borges@ua.pt",
-  bio: `I am a Software Engineering graduate who works primarily as a full-stack builder, with my strongest focus on the frontend. I enjoy turning ideas into clear, usable interfaces and stitching them together with the backend APIs that make them work. I value clarity, rigor, and the discipline of writing software that endures.`,
+  website: "https://bennytime.github.io/portofolio/",
+  linkedin: "https://www.linkedin.com/in/bernardo-borges-079ba5418/",
+  address: "3830-159, Ílhavo, Portugal",
+  drivingLicence: "B",
+  bio: `I am a Bachelor's student in Computer Engineering at the University of Aveiro with hands-on experience in full-stack development. I focus on building clear, usable frontends and the backend APIs that make them work. I value clarity, rigor, and writing software that endures.`,
   social: {
-    github: "https://github.com/bennytime",
+    github: "https://github.com/BennyTime",
   },
 };
 
 export const skills = {
-  Languages: ["Python", "JavaScript", "TypeScript", "Java", "C", "SQL"],
+  Languages: ["Python", "JavaScript", "TypeScript", "Java", "C", "C#", "SQL"],
   Frameworks: ["FastAPI", "React", "Three.js", "Node.js"],
   Infrastructure: ["Docker", "PostgreSQL", "MongoDB", "Redis", "Keycloak"],
   Observability: ["Grafana", "Prometheus"],
+  Tools: ["Git", "Bash", "K6", "Jira", "UML"],
+  Frontend: ["HTML", "CSS"],
   Practices: ["Microservices", "REST APIs", "CI/CD", "Network Security"],
 };
 
@@ -22,7 +31,7 @@ export const experience = [
   {
     role: "Software Engineering Graduate",
     org: "University of Aveiro",
-    period: "2022 — 2026",
+    period: "12/09/2022 — 06/07/2026",
     summary:
       "Completed a comprehensive software engineering programme with a strong focus on full-stack development — particularly the frontend — alongside backend API design and security. Delivered production-grade academic projects in collaboration with university institutions.",
   },
@@ -37,19 +46,29 @@ export const experience = [
 
 export const education = [
   {
-    degree: "B.Sc. in Software Engineering",
+    degree: "Bachelor's of Science in Computer Engineering",
     org: "University of Aveiro",
-    period: "2022 — 2026",
+    period: "12/09/2022 — 06/07/2026",
     note: "Focused on software engineering and information systems, with an emphasis on building practical and scalable applications. The course emphasized engineering principles, problem-solving, and independent learning through hands-on software development.",
   },
 ];
+
+export const languageSkills = {
+  motherTongue: "Portuguese",
+  other: [
+    {
+      language: "English",
+      level: "C2",
+    },
+  ],
+};
 
 export const projects = [
   {
     id: "taca-ua",
     name: "Taça UA — Administration Website",
     type: "Full-stack · Microservices",
-    period: "Feb — Jun 2025",
+    period: "Feb — Jun 2026",
     description:
       "A full-stack platform for AAUAv built on a distributed, event-driven microservices architecture. Backend services were implemented with FastAPI and Django REST with asynchronous task pipelines. The React frontend was integrated with Keycloak for identity and access. The system is observed end-to-end through Grafana, Prometheus, and centralized logging.",
     stack: ["FastAPI", "Django REST", "React", "Keycloak", "Grafana", "Prometheus"],
